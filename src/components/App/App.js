@@ -7,9 +7,12 @@ class App extends React.Component {
     return (
       <div id="app">
         <main className={styles.component}>
-          <h1 className={styles.title}>My first React app</h1>
+          <h1 className={styles.title}>React App</h1>
           <h2 className={styles.subtitle}>Hello world!</h2>
-          <List />
+          <List
+            image={'./src/styles/space.png'}
+            title={['Things to do ', <sup key='1'>soon!</sup>]}
+          />
         </main>
       </div>
     )

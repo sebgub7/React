@@ -12,8 +12,10 @@ class Column extends React.Component {
   }
 
   static propTypes = {
+    cards: PropTypes.array.isRequired,
     title: PropTypes.string.isRequired,
-    children: PropTypes.string
+    children: PropTypes.string,
+    icon: PropTypes.symbol,
   }
 
   addCard(title){
@@ -24,8 +26,8 @@ class Column extends React.Component {
           {
             key: state.cards.length ? state.cards[state.cards.length-1].key+1 : 0,
             title,
-          }
-        ]
+          },
+        ],
       }
     ));
   }
@@ -39,15 +41,15 @@ class Column extends React.Component {
           </span>
         </h3>
         <div className={styles.card}>
-        {this.state.cards.map(({key, ...cardProps}) => (
-          <Card key={key} {...cardProps} />
-        ))}
+          {this.state.cards.map(({key, ...cardProps}) => (
+            <Card key={key} {...cardProps} />
+          ))}
         </div>
         <div className={styles.creator}>
           <Creator text={settings.cardCreatorText} action={title => this.addCard(title)}/>
         </div>
       </section>
-    )
+    );
   }
 }
 

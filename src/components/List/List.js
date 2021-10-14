@@ -21,7 +21,7 @@ class List extends React.Component {
   static defaultProps = {
     description: settings.defaultListDescription,
     columns: listData.columns,
-}
+  }
 
   addColumn(title){
     this.setState(state => (
@@ -32,32 +32,32 @@ class List extends React.Component {
             key: state.columns.length ? state.columns[state.columns.length-1].key+1 : 0,
             title,
             icon: 'list-alt',
-            cards: []
-          }
-        ]
+            cards: [],
+          },
+        ],
       }
     ));
   }
   render() {
     return (
       <section id="List" className={styles.component}>
-          <Hero
+        <Hero
           photo={this.props.image}
           titleText={this.props.title}
-          />
-          <div className={styles.description}>
-            {ReactHtmlParser(this.props.description)}
-          </div>
-          <div className={styles.columns}>
+        />
+        <div className={styles.description}>
+          {ReactHtmlParser(this.props.description)}
+        </div>
+        <div className={styles.columns}>
           {this.state.columns.map(({key, ...columnProps}) => (
             <Column key={key} {...columnProps} />
           ))}
-          </div>
-          <div className={styles.creator}>
-            <Creator text={settings.columnCreatorText} action={title => this.addColumn(title)}/>
-          </div>
+        </div>
+        <div className={styles.creator}>
+          <Creator text={settings.columnCreatorText} action={title => this.addColumn(title)}/>
+        </div>
       </section>
-    )
+    );
   }
 }
 

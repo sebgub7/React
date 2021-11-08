@@ -10,8 +10,8 @@ const Hero = props => (
 );
 
 Hero.propTypes = {
-  titleText: PropTypes.arrayOf(PropTypes.node).isRequired,
-  photo: PropTypes.string.isRequired,
+  titleText: PropTypes.node.isRequired,
+  photo: PropTypes.string,
 };
 
 export default Hero;

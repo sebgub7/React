@@ -77,7 +77,7 @@ const lists = [
     id: 'list-1',
     title: 'Things to do <sup>soon!</sup>',
     description: 'Interesting things I want to check out!',
-    image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+    photo: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
   },
 ];
 

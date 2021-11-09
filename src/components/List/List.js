@@ -10,7 +10,7 @@ import ReactHtmlParser from 'react-html-parser';
 class List extends React.Component {
 
   static propTypes = {
-    image: PropTypes.string.isRequired,
+    photo: PropTypes.string,
     title: PropTypes.node.isRequired,
     description: PropTypes.node,
     columns: PropTypes.array,
@@ -22,10 +22,10 @@ class List extends React.Component {
   }
 
   render() {
-    const {title, image, description, columns} = this.props;
+    const {title, photo, description, columns} = this.props;
     return (
       <section id="List" className={styles.component}>
-        <Hero titleText={title} image={image} />
+        <Hero titleText={title} photo={photo} />
         <div className={styles.description}>
           {ReactHtmlParser(description)}
         </div>

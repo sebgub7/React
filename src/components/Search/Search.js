@@ -30,6 +30,7 @@ class Search extends React.Component {
   }
 
   handleOK(){
+    console.log ('value', this.state.value);
     this.props.changeSearchString(this.state.value);
   }
 

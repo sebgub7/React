@@ -84,6 +84,18 @@ const lists = [
     description: 'Interesting things I want to check out!',
     photo: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
   },
+  {
+    id: 'list-2',
+    title: 'The world of sport',
+    description: 'See what is new',
+    photo: 'https://images.pexels.com/photos/9438095/pexels-photo-9438095.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260.png',
+  },
+  {
+    id: 'list-3',
+    title: 'The world of games',
+    description: 'See what is new',
+    photo: 'https://images.pexels.com/photos/275033/pexels-photo-275033.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260.png',
+  },
 ];
 
 const columns = [
